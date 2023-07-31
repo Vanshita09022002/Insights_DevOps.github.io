@@ -1,0 +1,140 @@
+.role__teams {
+    margin-top: 3rem;
+}
+
+.role__teams-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+}
+
+.role__teams-right > p {
+    margin: 1.6rem 0 2.5rem;
+}
+
+.teams__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.team__card {
+    background: var(--color-bg1);
+    padding: 1.6rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.team__card:hover {
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+.team__icon {
+    background: var(--color-danger);
+    padding: 0.6rem;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.team__card:nth-child(2) .team__icon {
+    background: var(--color-success);
+}
+
+.team__card:nth-child(3) .team__icon {
+    background: var(--color-primary);
+}
+
+.team__card p {
+    margin-top: 1rem;
+}
+
+.roles {
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+
+.role__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.role__member {
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.role__member:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.role__member-image {
+    filter: saturate(0);
+}
+
+.role__member:hover img {
+    filter: saturate(1);
+}
+
+.role__member-info * {
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+.role__member-info p {
+    color: var(--color-light);
+}
+
+@media screen and (max-width: 1024px) {
+    .role__teams {
+        margin-top: 2rem;
+    }
+
+    .role__teams-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .role__teams-left {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .role__container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .role__member {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .teams__cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .role__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .role__member {
+        padding: 0;
+    }
+
+    .role__member p {
+        margin-bottom: 1.5rem;
+    }
+}
